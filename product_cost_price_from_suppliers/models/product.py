@@ -10,27 +10,25 @@ class product_template_with_cost_price_auto(models.Model):
     standard_price = fields.Float('Cost Price', compute='_compute_lowest_supplier_price')
     manual_cost_price = fields.Float('Manual cost price', default=0)
 
-    @api.multi
-    @api.depends('cost_price_from_suppliers', 'seller_ids', 'manual_cost_price')
+    @api.one
     def _compute_lowest_supplier_price(self):
-        for product in self:
-            if product.cost_price_from_suppliers == True:
-                # Get the lowest price for suppliers
-                min_price = 0
-                for supp in product.seller_ids:
-                    if (min_price == 0 and supp.price > 0) or (supp.state == 'sellable' and supp.price < min_price):
-                        min_price = supp.price
+        self.ensure_one()
+        if self.cost_price_from_suppliers == True:
+            # Get the lowest price for suppliers
+            min_price = 0
+            for supp in self.seller_ids:
+                if (min_price == 0 and supp.price > 0) or (supp.state == 'sellable' and supp.price < min_price):
+                    min_price = supp.price
 
-                product.standard_price = min_price
-                _logger.debug("%s | PT : Price computed regarded supplier (%s)", product.id, product.standard_price)
-            else:
-                product.standard_price = product.manual_cost_price
-                _logger.debug("%s | PT : Price computed manually (%s)", product.id, product.standard_price)
+            self.standard_price = min_price
+            #_logger.debug("%s - PT : Price computed regarded supplier (%s)", self.id, self.standard_price)
+        else:
+            self.standard_price = self.manual_cost_price
+            #_logger.debug("%s - PT : Price computed manually (%s)", self.id, self.standard_price)
 
-            # Set the flag on the child products
-            for variant in product.product_variant_ids:
-                variant.write({'standard_price': product.standard_price})
-                variant.standard_price = product.standard_price
+        # Set the flag on the child products
+        for variant in self.product_variant_ids:
+            variant.standard_price = self.standard_price
 
 class product_product_with_cost_price_auto(models.Model):
     _inherit = ['product.product']
@@ -39,12 +37,11 @@ class product_product_with_cost_price_auto(models.Model):
     standard_price = fields.Float('Cost Price', compute='_compute_standard_price')
     #manual_cost_price = fields.Float('Manual cost price', related="product_tmpl_id.manual_cost_price") #default=0)
 
-    @api.multi
-    @api.depends('product_tmpl_id')
+    @api.one
     def _compute_standard_price(self):
-        for product in self:
-            _logger.debug("%s Compute price for %s", product.name)
-            product.standard_price = product.product_tmpl_id.standard_price
+        self.ensure_one()
+        #_logger.debug("%s Compute price for %s", self.name)
+        self.standard_price = self.product_tmpl_id.standard_price
 
     @api.multi
     def open_product_template(self):
