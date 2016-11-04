@@ -11,6 +11,7 @@ class product_template_with_cost_price_auto(models.Model):
     manual_cost_price = fields.Float('Manual cost price', default=0)
 
     @api.one
+    @api.depends('cost_price_from_suppliers', 'seller_ids', 'manual_cost_price')
     def _compute_lowest_supplier_price(self):
         self.ensure_one()
         if self.cost_price_from_suppliers == True:
@@ -38,9 +39,10 @@ class product_product_with_cost_price_auto(models.Model):
     #manual_cost_price = fields.Float('Manual cost price', related="product_tmpl_id.manual_cost_price") #default=0)
 
     @api.one
+    @api.depends('product_tmpl_id')
     def _compute_standard_price(self):
         self.ensure_one()
-        #_logger.debug("%s Compute price for %s", self.name)
+        #_logger.debug("%s Compute price for %s", product.name)
         self.standard_price = self.product_tmpl_id.standard_price
 
     @api.multi
