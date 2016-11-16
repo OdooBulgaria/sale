@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="portal_wizard_email_template_view">
+            <field name="name">Portal wizard email template</field>
+            <field name="model">portal.wizard</field>
+            <field name="inherit_id" ref="portal.wizard_view"/>
+            <field name="arch" type="xml">
+                <field name="welcome_message" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </field>
+                <field name="user_ids" position="after">
+                    <group>
+                        <field name="email_template"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
