@@ -1,14 +1,15 @@
-﻿{
+{
     'name': "AbAKUS portal improvements",
-    'version': '9.0.1.0',
+    'version': '9.0.1.0.1',
     'depends': [
-	'sale_contract',
-	'account_analytic_account_improvements',
-	'sla',
-	'website_sale'],
-    'author': "Bernard DELHEZ, AbAKUS it-solutions SARL",
+	   'sale_contract',
+	   'account_analytic_account_improvements',
+	   'sla',
+	   'website_sale'
+    ],
+    'author': "AbAKUS it-solutions SARL",
     'website': "http://www.abakusitsolutions.eu",
-    'category': 'Contract',
+    'category': 'Sale',
     'description': 
     """
     This modules adds some improvements to the odoo portal. 
@@ -45,11 +46,11 @@
 
     This module has been developed by Bernard Delhez, intern @ AbAKUS it-solutions, under the control of Valentin Thirion.
     """,
-    'data': ['view/portal_wizard_view.xml',
-             'view/portal_sale_view.xml',
-             'view/portal_project_issue.xml',
-             'view/res_partner_view.xml',
-             'portal_wizard_user_email_template.xml',
+    'data': ['views/portal_wizard_view.xml',
+             'views/portal_sale_view.xml',
+             'views/portal_project_issue.xml',
+             'views/res_partner_view.xml',
+             'data/portal_wizard_user_email_template.xml',
              'security/portal_security.xml',
              'security/ir.model.access.csv',
             ],
