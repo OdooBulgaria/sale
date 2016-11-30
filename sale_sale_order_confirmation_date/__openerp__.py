@@ -11,5 +11,7 @@ It adds a date field on Sale Orders that is set with the date of the order confi
 It should be already present from Odoo original, but not working for us
 
 This module has been developed by Valentin THIRION @ AbAKUS it-solutions""",
-    'data': [],
+    'data': [
+        'views/sale_order_view.xml',
+    ],
 }
