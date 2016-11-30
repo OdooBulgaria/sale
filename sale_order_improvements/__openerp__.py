@@ -8,7 +8,6 @@
     'description': 
     """Sale order improvements.
 
-    - It set the current date to the order date of quotations or sales orders.
     - Invoice Address is alterable after sale order confirmation.
     - New field special condition. Will be included at the end of the quotation report.
     - Attachment field in Quotations and Sale Orders
@@ -18,8 +17,8 @@
 This module has been developed by AbAKUS it-solution.
     """,
     'data': [
-        'views/report_saleorder.xml',
         'views/sale_order_view.xml',
         'security/ir.model.access.csv',
+        'reports/sale_order_report.xml',
     ],
 }

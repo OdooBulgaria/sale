@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- TEMPLATE DEFINITION -->
+        <template id="sale_order_report_improved" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@class='page']" position="replace">
+                <div class="page">
+                    <style type="text/css">
+                        body {
+                            font-family: "Verdana", Times New Roman", Times, serif;
+                        }
+                        h1 {
+                            color: #F68B19;
+                            font-size: 20pt;
+				        }
+                        .uppertable {
+                            font-size: 11pt;
+                            color: black;
+                            border-style: outset;
+                        } 
+                        .orange {
+                            color: #F68B19;
+                        }
+                        </style>
+                    <div class="oe_structure"/>
+
+                     <h1>
+                        <span t-if="doc.state not in ['draft','sent']">Order </span>
+                        <span t-if="doc.state in ['draft','sent']">Quotation </span>
+                        <span t-field="doc.name"/>
+                    </h1>
+                    <div class="row mt32 mb32 uppertable" id="informations">
+                        <div class="col-xs-2">
+                            <!-- Quotation / SO Date -->
+                            <t t-if="doc.state in ['draft','sent']">
+                                Quotation Date:<br />
+                            </t>
+                            <t t-if="doc.state in ['sale','done']">
+                                Order Date:<br />
+                            </t>
+                            <!-- Validity Date -->
+                            <t t-if="doc.state in ['draft','sent']">
+                                Expiration Date:<br />
+                            </t>
+                            <!-- Salesperson -->
+                            <span>Representative:<br /></span>
+                            <!-- Payment Term -->
+                            <span>Payment Term:<br /></span>
+                            <!-- Reference -->
+                            <span>Reference:<br /></span>
+                            
+                        </div>
+                        <div class="col-xs-3">
+                            <!-- Quotation / SO Date -->
+                            <t t-if="doc.state in ['draft','sent']">
+                                <span t-esc="doc.date_order" t-esc-options='{"format": "d MMMM y"}'/>  <br />
+                            </t>
+                            <t t-if="doc.state in ['sale','done']">
+                                <span t-esc="doc.confirmation_date" t-esc-options='{"format": "d MMMM y"}'/>  <br />
+                            </t>
+                            <!-- Validity Date -->
+                            <t t-if="doc.state in ['draft','sent']">
+                                <span t-esc="doc.validity_date" t-esc-options='{"format": "d MMMM y"}'/>  <br />
+                            </t>
+                            <!-- Salesperson -->
+                            <span t-field="doc.user_id.name"/><br />
+                            <!-- Payment Term -->
+                             <span t-field="doc.payment_term_id"/><br />
+                            <!-- Reference -->
+                            <span t-field="doc.client_order_ref"/>
+                        </div>
+                        <div class="col-xs-5">
+                            <!-- Partner Invoice Name -->
+                            <div t-field="doc.partner_invoice_id" class="orange" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;], &quot;no_marker&quot;: true, &quot;phone_icons&quot;: true}"/>
+                            <!-- Partner Invoice Address -->
+                            <div t-field="doc.partner_invoice_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;vat&quot;], &quot;no_marker&quot;: true, &quot;phone_icons&quot;: true}"/>
+                            <!-- TAX ID -->
+                             <span t-if="doc.partner_id.vat">VAT: <span t-field="doc.partner_id.vat"/></span>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>
