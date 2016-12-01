@@ -17,7 +17,6 @@ This module has been developed by AbAKUS it-solution.
     """,
     'data': [
         'views/sale_order_view.xml',
-        'security/ir.model.access.csv',
         'reports/sale_order_report.xml',
     ],
 }

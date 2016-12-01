@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e-20161129\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-01 15:43+0000\n"
-"PO-Revision-Date: 2016-12-01 16:48+0100\n"
+"POT-Creation-Date: 2016-12-01 16:39+0000\n"
+"PO-Revision-Date: 2016-12-01 17:40+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: fr\n"
+"Language: de\n"
 "X-Generator: Poedit 1.8.11\n"
 
 #. module: sale_order_improvements
@@ -36,6 +36,11 @@ msgstr "<span><strong>Referenz:</strong><br/></span>"
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "<span><strong>Representative:</strong><br/></span>"
 msgstr "<span><strong>Berater:</strong><br/></span>"
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "<span><strong>Requestor:</strong><br/></span>"
+msgstr "<span><strong>zu Händen:</strong><br/></span>"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
@@ -80,12 +85,17 @@ msgstr "Beschreibung"
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "Disc.(%)"
-msgstr "Nachlass (%)"
+msgstr "Rabatt (%)"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "La commande se fait par retour de cette offre datée, signée et précédée de la mention « lu et approuvé ». La confirmation de commande peut également se faire par email ou par approbation en ligne sur notre portail."
 msgstr "Um dieses Angebot als Bestellung zu bestätigen, senden Sie es uns bitte zum Auftrag unterschrieben zurück. Die Bestätigung kann ebenfalls per Antwortemail oder über den einmaligen Link in unserem Portal erfolgen."
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "La facture sera envoyée et due dès livraison des biens et/ou des services."
+msgstr "Die Rechnungstellung erflog bei Lieferung der Ware und/oder Dienstleistung."
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
@@ -100,7 +110,7 @@ msgstr "Die von uns bereitgestellten Datenblätter, Beschreibungen und Bilder ge
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_title_report_improved
 msgid "Order"
-msgstr "Auftrag"
+msgstr "Bestellung"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
@@ -129,8 +139,7 @@ msgstr "Falls nicht anders vermerkt gelten unserer allgemeinen Geschäftsbedingu
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid ""
-"Sauf si repris dans la liste des produits et services offerts, les frais d’installation et de configuration ne sont pas compris dans cette offre."
+msgid "Sauf si repris dans la liste des produits et services offerts, les frais d’installation et de configuration ne sont pas compris dans cette offre."
 msgstr "Falls nicht genau in der Aufstellung der Produkte und Dienstleistungen vermerkt, beinhaltet diese Angebot weder die Konfigurations- noch Installationsdienstleistungen."
 
 #. module: sale_order_improvements
@@ -141,19 +150,9 @@ msgstr "Umsatzsteuer"
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "Total"
-msgstr "Gesamter Zahlungbe"
+msgstr "Bruttobetrag"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "VAT:"
 msgstr "USt."
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Requestor:"
-msgstr "zu Händen:"
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "La facture sera envoyée et due dès livraison des biens et/ou des services."
-msgstr "Die Rechnungstellung erflog bei Lieferung der Ware und/oder Dienstleistung."

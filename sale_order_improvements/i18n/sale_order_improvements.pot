@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e-20161129\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-01 14:53+0000\n"
-"PO-Revision-Date: 2016-12-01 14:53+0000\n"
+"POT-Creation-Date: 2016-12-01 16:38+0000\n"
+"PO-Revision-Date: 2016-12-01 16:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,6 +33,11 @@ msgstr ""
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "<span><strong>Representative:</strong><br/></span>"
+msgstr ""
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "<span><strong>Requestor:</strong><br/></span>"
 msgstr ""
 
 #. module: sale_order_improvements
@@ -77,32 +82,27 @@ msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Die Rechnungstellung erflog bei Lieferung der Ware und/oder Dienstleistung."
-msgstr ""
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Die von uns bereitgestellten Datenblätter, Beschreibungen und Bilder gelten lediglich als Anhaltspunkt um das Angebot besser zu erläutern."
-msgstr ""
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "Disc.(%)"
 msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Durch Bestätigung des Angebots erklären sie sich bereit den vorgeschlagenen Lösungen, Technologien und Dienstleitungen zuzustimmen. Falls ein Produkt zum Zeitpunkt der Bestellung nicht mehr Verfügbar sein sollte, behalten wir uns das Recht vor, in Absprache mit Ihnen dieses durch ein Ähnliches oder Gleichwertiges zu ersetzen."
+msgid "La commande se fait par retour de cette offre datée, signée et précédée de la mention « lu et approuvé ». La confirmation de commande peut également se faire par email ou par approbation en ligne sur notre portail."
 msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Falls nicht anders vermerkt gelten unserer allgemeinen Geschäftsbedingungen (AGB). Die Bestätigung dieses Angebotes zum Auftrag gilt auch für die Kenntnisnahme und die Annahme unserer AGB. Unsere AGB sind unter www.abakusitsolutions.eu/company/general-conditions veröffentlicht."
+msgid "La facture sera envoyée et due dès livraison des biens et/ou des services."
 msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Falls nicht genau in der Aufstellung der Produkte und Dienstleistungen vermerkt, beinhaltet diese Angebot weder die Konfigurations- noch Installationsdienstleistungen."
+msgid "L’acceptation marque l'accord du client sur les solutions, la technologie et les prestations proposées. Moyennant information préalable au client, AbAKUS it-solutions se réserve le droit de proposer du matériel similaire ou équivalent si le produit commandé n’est plus disponible."
+msgstr ""
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "L’ensemble des plans, de la documentation descriptive, des spécifications des produits et toutes les descriptions ou illustrations sont faits à la seule fin de donner une idée indicative des produits qui y sont décrits."
 msgstr ""
 
 #. module: sale_order_improvements
@@ -132,6 +132,16 @@ msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "Sauf mention contraire, les conditions générales d’AbAKUS it-solutions sont d’application. En acceptant cette offre le client reconnait avoir pu en prendre connaissance et les accepter. Les conditions générales de vente sont disponibles sur www.abakusitsolutions.eu/company/general-conditions"
+msgstr ""
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "Sauf si repris dans la liste des produits et services offerts, les frais d’installation et de configuration ne sont pas compris dans cette offre."
+msgstr ""
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "Taxes"
 msgstr ""
 
@@ -142,16 +152,6 @@ msgstr ""
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Um dieses Angebot als Bestellung zu bestätigen, senden Sie es uns bitte zum Auftrag unterschrieben zurück. Die Bestätigung kann ebenfalls per Antwortemail oder über den einmaligen Link in unserem Portal erfolgen."
-msgstr ""
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "VAT:"
-msgstr ""
-
-#. module: sale_order_improvements
-#: model:ir.model,name:sale_order_improvements.model_sale_order_special_condition
-msgid "sale.order.special.condition"
 msgstr ""
 
