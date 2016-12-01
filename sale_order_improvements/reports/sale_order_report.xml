@@ -139,6 +139,8 @@
                             <span><strong>Representative:</strong><br /></span>
                             <!-- Payment Term -->
                             <span><strong>Payment Term:</strong><br /></span>
+                            <!-- Delivery Method -->
+                            <span><strong>Delivery Method:</strong><br /></span>
                             <!-- Reference -->
                             <span><strong>Reference:</strong><br /></span>
                             
@@ -159,6 +161,8 @@
                             <span t-field="doc.user_id.name"/><br />
                             <!-- Payment Term -->
                              <span t-field="doc.payment_term_id"/><br />
+                            <!-- Delivery Method -->
+                             <span t-field="doc.carrier_id.name"/><br />
                             <!-- Reference -->
                             <span t-field="doc.client_order_ref"/>
                         </div>
