@@ -199,12 +199,7 @@
                     <!-- Lines -->
                     <table class="sale_table" width="100%">
                         <!-- Hide discout columns if no discount is applied for all lines -->
-                        <t t-set="discount_on_lines" t-value="False"/>
-                        <t t-foreach="doc.order_line" t-as="line">
-                            <t t-if="line.discount">
-                                <t t-set="discount_on_lines" t-value="True"/>
-                            </t>
-                        </t>
+                        <t t-set="discount_on_lines" t-value="any([l.discount for l in doc.order_line])"/>
                         <thead>
                             <tr>
                                 <th width="75px"></th>
