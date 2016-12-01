@@ -9,9 +9,6 @@
                 <xpath expr="//field[@name='order_line']" position="before">
                     <field name="header_text" />
                 </xpath>
-                <field name="payment_term_id" position="after">
-                    <field name="special_condition_id"/>
-                </field>
             </field>
         </record>
         <record model="ir.ui.view" id="sale_order_client_order_ref_move_view">

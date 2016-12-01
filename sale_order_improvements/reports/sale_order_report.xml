@@ -67,8 +67,13 @@
                             font-style: bold;
                             border: 2px solid #F68B19;
                         }
-                        .sale_table td, .sale_table th {
+                        .sale_table th {
                             border: 1px solid #F68B19;
+                        }
+                        .sale_table td {
+                            border-bottom: 1px solid #F68B19;
+                        }
+                        .sale_table td, .sale_table th {
                             vertical-align: top;
                             padding: 2px 8px 2px 8px;
                         }
@@ -137,6 +142,8 @@
                             </t>
                             <!-- Salesperson -->
                             <span><strong>Representative:</strong><br /></span>
+                            <!-- Salesperson -->
+                            <span><strong>Requestor:</strong><br /></span>
                             <!-- Payment Term -->
                             <span><strong>Payment Term:</strong><br /></span>
                             <!-- Delivery Method -->
@@ -159,6 +166,8 @@
                             </t>
                             <!-- Salesperson -->
                             <span t-field="doc.user_id.name"/><br />
+                            <!-- Contact Person -->
+                            <span t-field="doc.partner_id.name"/><br />
                             <!-- Payment Term -->
                              <span t-field="doc.payment_term_id"/><br />
                             <!-- Delivery Method -->
@@ -168,7 +177,7 @@
                         </div>
                         <div class="col-xs-5">
                             <!-- Partner Invoice Name -->
-                            <strong><div t-field="doc.partner_id" class="orange" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;], &quot;no_marker&quot;: true, &quot;phone_icons&quot;: true}"/></strong>
+                            <strong><div t-field="doc.partner_invoice_id" class="orange" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;name&quot;], &quot;no_marker&quot;: true, &quot;phone_icons&quot;: true}"/></strong>
                             <!-- Partner Invoice Address -->
                             <div t-field="doc.partner_invoice_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;vat&quot;], &quot;no_marker&quot;: true, &quot;phone_icons&quot;: true}"/>
                             <!-- TAX ID -->
@@ -277,8 +286,10 @@
                             L’ensemble des plans, de la documentation descriptive, des spécifications des produits et toutes les descriptions ou illustrations sont faits à la seule fin de donner une idée indicative des produits qui y sont décrits.
                         </p>
                         <p>
-                            Sauf si repris dans la liste des produits et services offerts, les frais d’installation et de configuration ne sont pas compris dans cette offre. 
-La facture sera envoyée et due dès livraison des biens et/ou des services.
+                            Sauf si repris dans la liste des produits et services offerts, les frais d’installation et de configuration ne sont pas compris dans cette offre.
+                        </p>
+                        <p>
+                            La facture sera envoyée et due dès livraison des biens et/ou des services.
                         </p>
                         <p>
                             Sauf mention contraire, les conditions générales d’AbAKUS it-solutions sont d’application. En acceptant cette offre le client reconnait avoir pu en prendre connaissance et les accepter. Les conditions générales de vente sont disponibles sur www.abakusitsolutions.eu/company/general-conditions
