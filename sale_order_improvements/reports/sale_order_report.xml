@@ -204,7 +204,7 @@
                                 <th width="75px" class="text-right">Quantity</th>
                                 <th width="100px" class="text-right">Price</th>
                                 <th width="75px" t-if="discount_on_lines" class="text-right" groups="sale.group_discount_per_so_line">Disc.(%)</th>
-                                <th width="100px" class="text-right">Total</th>
+                                <th width="100px" class="text-right">Amount</th>
                             </tr>
                         </thead>
                         <tbody class="sale_lines_body">

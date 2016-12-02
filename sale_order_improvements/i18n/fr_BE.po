@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e-20161129\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-01 16:40+0000\n"
-"PO-Revision-Date: 2016-12-01 17:40+0100\n"
+"POT-Creation-Date: 2016-12-02 13:07+0000\n"
+"PO-Revision-Date: 2016-12-02 14:10+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,12 @@ msgstr "<strong>Total hors taxes</strong>"
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "<strong>Total</strong>"
-msgstr "<strong>Total à payer</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: sale_order_improvements
+#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
+msgid "Amount"
+msgstr "Montant"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.view_sale_order_attachments
@@ -146,11 +151,6 @@ msgstr "Sauf si repris dans la liste des produits et services offerts, les frais
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "Taxes"
 msgstr "Taxes"
-
-#. module: sale_order_improvements
-#: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
-msgid "Total"
-msgstr "Total"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
