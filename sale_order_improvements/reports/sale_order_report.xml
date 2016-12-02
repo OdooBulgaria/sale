@@ -65,10 +65,7 @@
                         }
                         .sale_table th {
                             font-style: bold;
-                            border: 2px solid #F68B19;
-                        }
-                        .sale_table th {
-                            border: 1px solid #F68B19;
+                            border-bottom: 1px solid #F68B19;
                         }
                         .sale_table td {
                             border-bottom: 1px solid #F68B19;
