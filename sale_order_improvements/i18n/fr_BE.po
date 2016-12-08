@@ -20,7 +20,7 @@ msgstr ""
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
 msgid "<span><strong>Delivery Method:</strong><br/></span>"
-msgstr "<span><strong>Métholde de livraison :</strong><br/></span>"
+msgstr "<span><strong>Méthode de livraison :</strong><br/></span>"
 
 #. module: sale_order_improvements
 #: model:ir.ui.view,arch_db:sale_order_improvements.sale_order_report_improved
